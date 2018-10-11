@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="China.ICBC.SWIFT.MT103">
+    <Position X="18.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAAEAAAAAEAAAAAAAIAAAAAAAAAAAAABgAA=</HashCode>
+      <FileName>SWIFT\MT103.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Fields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.TransactionNumber">
+    <Position X="6.25" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAoAAQAAAAAAAAAAAAAAAAgAAAABAAgCAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\TransactionNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.Sender">
+    <Position X="12.5" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAABAAAAQAAAgAAAACAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\Sender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.FieldBase">
+    <Position X="6.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgAAAAAAAAAAAEAAAAAAIgAAAgAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\FieldBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.Amount">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAgAAAAAAAACAgAAAABAAggAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\Amount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.HeadSwiftCode">
+    <Position X="14.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAoAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\OrganizationSwiftCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CashBranchSwiftCode">
+    <Position X="13.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>SWIFT\Fields\CashBranchSwiftCode.cs</FileName>
+      <NewMemberFileName>SWIFT\Fields\CardBranchSwiftCode.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.Beneficiary">
+    <Position X="18" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAIBAAAAAAAAAAAgAAAACAAgAgAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\Beneficiary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.BankOperationCode">
+    <Position X="8.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAgAAAgAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\BankOperationCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.ExpensesDetail">
+    <Position X="23.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAgAAAAAAgAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\ExpensesDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.MessageA">
+    <Position X="16.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\MessageA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.MessageB">
+    <Position X="18.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\MessageB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardRateSenderToReceiverInformation">
+    <Position X="34" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAgAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardRateSenderToReceiverInformation.cs</FileName>
+      <NewMemberFileName>SWIFT\Fields\CardSenderToReceiverInformation.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CashBeneficiary">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CashBeneficiary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardBeneficiary">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardBeneficiary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardRateBranchSwiftCode">
+    <Position X="15.75" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardRateBranchSwiftCode.cs</FileName>
+      <NewMemberFileName>SWIFT\Fields\CardBranchSwiftCode.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.BranchSwiftCode">
+    <Position X="16" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\BranchSwiftCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.SenderToReceiverInformation">
+    <Position X="28.75" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\SenderToReceiverInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CashSenderToReceiverInformation">
+    <Position X="31.25" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>SWIFT\Fields\CashSenderToReceiverInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.PaymentInformation">
+    <Position X="21.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\PaymentInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardRatePaymentInformation">
+    <Position X="26" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardRatePaymentInformation.cs</FileName>
+      <NewMemberFileName>SWIFT\Fields\CardPaymentInformation.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CashPaymentInformation">
+    <Position X="23.75" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CashPaymentInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.MessageC">
+    <Position X="20.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\MessageC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardBranchSwiftCode">
+    <Position X="11.5" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardBranchSwiftCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardPaymentInformation">
+    <Position X="21.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardPaymentInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="China.ICBC.SWIFT.Fields.CardSenderToReceiverInformation">
+    <Position X="28.5" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>SWIFT\Fields\CardSenderToReceiverInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="China.ICBC.SWIFT.Fields.Common.IField">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAIgAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>SWIFT\Fields\IField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

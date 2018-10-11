@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ICBC.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ICBCStoreContainer">
+          <EntitySet Name="China_ICBC_Hieroglyphs" EntityType="ICBC.Store.China_ICBC_Hieroglyphs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="China_ICBC_ProvincialBranch" EntityType="ICBC.Store.China_ICBC_ProvincialBranch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="China_ICBC_Transactions" EntityType="ICBC.Store.China_ICBC_Transactions" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="China_ICBC_Hieroglyphs">
+          <Key>
+            <PropertyRef Name="RowID" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Hieroglyph" Type="nchar" Nullable="false" MaxLength="1" />
+          <Property Name="HieroglyphCode" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="RowID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="China_ICBC_ProvincialBranch">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="SWIFT" Type="varchar" Nullable="false" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="China_ICBC_Transactions">
+          <Key>
+            <PropertyRef Name="PaymentSystem" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="OrderNumber" />
+          </Key>
+          <Property Name="PaymentSystem" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" Nullable="false" />
+          <Property Name="SwiftTransactionNumber" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="MessageType" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="MessageSwift" Type="nvarchar" Nullable="false" MaxLength="1024" />
+          <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+          <Property Name="MessageObject" Type="varbinary(max)" Nullable="false" />
+          <Property Name="IsFileSent" Type="bit" Nullable="false" />
+          <Property Name="Код_проверки_платежа" Type="int" />
+          <Property Name="Код_платежа" Type="int" />
+        </EntityType>
+        <Function Name="spChina_ICBC_Transactions_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PaymentSystem" Type="char" Mode="In" />
+          <Parameter Name="DateTime" Type="datetime2" Mode="In" />
+          <Parameter Name="MessageType" Type="char" Mode="In" />
+          <Parameter Name="MessageSwift" Type="nvarchar" Mode="In" />
+          <Parameter Name="MessageObject" Type="varbinary(max)" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ICBC" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ICBC_Entities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="China_ICBC_Hieroglyphs" EntityType="ICBC.China_ICBC_Hieroglyphs" />
+          <FunctionImport Name="spChina_ICBC_Transactions_Insert" ReturnType="Collection(ICBC.spChina_ICBC_Transactions_Insert_Result)">
+            <Parameter Name="PaymentSystem" Mode="In" Type="String" />
+            <Parameter Name="DateTime" Mode="In" Type="DateTime" />
+            <Parameter Name="MessageType" Mode="In" Type="String" />
+            <Parameter Name="MessageSwift" Mode="In" Type="String" />
+            <Parameter Name="MessageObject" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <EntitySet Name="China_ICBC_Transactions" EntityType="ICBC.China_ICBC_Transactions" />
+          <EntitySet Name="China_ICBC_ProvincialBranch" EntityType="ICBC.China_ICBC_ProvincialBranch" />
+        </EntityContainer>
+        <EntityType Name="China_ICBC_Hieroglyphs">
+          <Key>
+            <PropertyRef Name="RowID" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Hieroglyph" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="HieroglyphCode" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="RowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <ComplexType Name="spChina_ICBC_Transactions_Insert_Result">
+          <Property Type="String" Name="PaymentSystem" Nullable="false" MaxLength="3" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+          <Property Type="String" Name="SwiftTransactionNumber" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="MessageType" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="MessageSwift" Nullable="false" MaxLength="1024" />
+          <Property Type="Time" Name="Time" Nullable="false" />
+          <Property Type="Int32" Name="Код_проверки_платежа" Nullable="true" />
+          <Property Type="Int32" Name="Код_платежа" Nullable="true" />
+          <Property Type="Binary" Name="MessageObject" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="China_ICBC_Transactions">
+          <Key>
+            <PropertyRef Name="PaymentSystem" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="OrderNumber" />
+          </Key>
+          <Property Type="String" Name="PaymentSystem" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+          <Property Type="String" Name="SwiftTransactionNumber" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="MessageType" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="MessageSwift" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Time" Name="Time" Nullable="false" />
+          <Property Type="Int32" Name="Код_проверки_платежа" />
+          <Property Type="Int32" Name="Код_платежа" />
+          <Property Type="Binary" Name="MessageObject" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Boolean" Name="IsFileSent" Nullable="false" />
+        </EntityType>
+        <EntityType Name="China_ICBC_ProvincialBranch">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SWIFT" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ICBCStoreContainer" CdmEntityContainer="ICBC_Entities">
+          <EntitySetMapping Name="China_ICBC_Hieroglyphs">
+            <EntityTypeMapping TypeName="ICBC.China_ICBC_Hieroglyphs">
+              <MappingFragment StoreEntitySet="China_ICBC_Hieroglyphs">
+                <ScalarProperty Name="RowID" ColumnName="RowID" />
+                <ScalarProperty Name="HieroglyphCode" ColumnName="HieroglyphCode" />
+                <ScalarProperty Name="Hieroglyph" ColumnName="Hieroglyph" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spChina_ICBC_Transactions_Insert" FunctionName="ICBC.Store.spChina_ICBC_Transactions_Insert">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICBC.spChina_ICBC_Transactions_Insert_Result">
+                <ScalarProperty Name="PaymentSystem" ColumnName="PaymentSystem" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="SwiftTransactionNumber" ColumnName="SwiftTransactionNumber" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="MessageSwift" ColumnName="MessageSwift" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Код_проверки_платежа" ColumnName="Код_проверки_платежа" />
+                <ScalarProperty Name="Код_платежа" ColumnName="Код_платежа" />
+                <ScalarProperty Name="MessageObject" ColumnName="MessageObject" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="China_ICBC_Transactions">
+            <EntityTypeMapping TypeName="ICBC.China_ICBC_Transactions">
+              <MappingFragment StoreEntitySet="China_ICBC_Transactions">
+                <ScalarProperty Name="IsFileSent" ColumnName="IsFileSent" />
+                <ScalarProperty Name="MessageObject" ColumnName="MessageObject" />
+                <ScalarProperty Name="Код_платежа" ColumnName="Код_платежа" />
+                <ScalarProperty Name="Код_проверки_платежа" ColumnName="Код_проверки_платежа" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="MessageSwift" ColumnName="MessageSwift" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="SwiftTransactionNumber" ColumnName="SwiftTransactionNumber" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PaymentSystem" ColumnName="PaymentSystem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="China_ICBC_ProvincialBranch">
+            <EntityTypeMapping TypeName="ICBC.China_ICBC_ProvincialBranch">
+              <MappingFragment StoreEntitySet="China_ICBC_ProvincialBranch">
+                <ScalarProperty Name="SWIFT" ColumnName="SWIFT" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ICBC">
+        <EntityTypeShape EntityType="ICBC.China_ICBC_Hieroglyphs" Width="2" PointX="3.375" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ICBC.China_ICBC_Transactions" Width="2" PointX="0.75" PointY="0.75" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="ICBC.China_ICBC_ProvincialBranch" Width="2.25" PointX="6.125" PointY="0.75" Height="1.5956835937499996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

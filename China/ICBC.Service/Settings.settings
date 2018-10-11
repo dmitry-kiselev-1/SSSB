@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ICBC.Service" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="outputDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\ftp\China\IN\test</Value>
+    </Setting>
+    <Setting Name="sqlConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">data source=APOLON;initial catalog=Snova_table_СССБ;integrated security=True;multipleactiveresultsets=True;App=EntityFramework</Value>
+    </Setting>
+    <Setting Name="sendMessageCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="sendDelayInHour" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="checkIntervalInSecond" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="logPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d:\Work\Китай\China\ICBC.Service\bin\Debug\ICBC.Service.Errorlog.txt</Value>
+    </Setting>
+    <Setting Name="maxLogSizeInKb" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">256</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

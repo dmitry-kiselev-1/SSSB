@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCA3030A-9682-47D0-AF78-615EA0E7F4BC}"
+	ProjectSection(SolutionItems) = preProject
+		China.vsmdi = China.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "China.ICBC", "China.ICBC\China.ICBC.csproj", "{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{3AA7CA6F-8B05-437C-8096-AF88880121FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICBC.Service", "ICBC.Service\ICBC.Service.csproj", "{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}.Release|x86.ActiveCfg = Release|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3AA7CA6F-8B05-437C-8096-AF88880121FB}.Release|x86.ActiveCfg = Release|Any CPU
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Debug|x86.ActiveCfg = Debug|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Debug|x86.Build.0 = Debug|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Release|Any CPU.ActiveCfg = Release|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Release|x86.ActiveCfg = Release|x86
+		{AACF85B6-AA92-4E47-A9F7-B50A4F3E024D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8A4DCBF-1155-4B2F-A250-FC3ED89D5B83}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = China.vsmdi
+	EndGlobalSection
+	GlobalSection(PowerDesigner) = preSolution
+		HasSWS = 1
+	EndGlobalSection
+EndGlobal

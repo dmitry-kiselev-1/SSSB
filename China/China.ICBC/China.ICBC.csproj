@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FECD4DC-63C2-4DE5-88AC-BF95F9D87ECF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>China.ICBC</RootNamespace>
+    <AssemblyName>China.ICBC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ORM\ICBC\ICBC.Designer.cs">
+      <DependentUpon>ICBC.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SWIFT\Fields\CardRateSenderToReceiverInformation.cs" />
+    <Compile Include="SWIFT\Fields\CardRateBranchSwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\CardRatePaymentInformation.cs" />
+    <Compile Include="SWIFT\Fields\CardSenderToReceiverInformation.cs" />
+    <Compile Include="SWIFT\Fields\CashPaymentInformation.cs" />
+    <Compile Include="SWIFT\Fields\Common\NameWithHieroglyph.cs" />
+    <Compile Include="SWIFT\Fields\CardBranchSwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\CashBranchSwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\CardPaymentInformation.cs" />
+    <Compile Include="SWIFT\Fields\Common\ProvincialBranch.cs" />
+    <Compile Include="SWIFT\Fields\CashSenderToReceiverInformation.cs" />
+    <Compile Include="SWIFT\MessageC.cs" />
+    <Compile Include="SWIFT\MessageTypes.cs" />
+    <Compile Include="SWIFT\MessageType.cs" />
+    <Compile Include="SWIFT\Fields\CardBeneficiary.cs" />
+    <Compile Include="SWIFT\Fields\CashBeneficiary.cs" />
+    <Compile Include="SWIFT\Fields\Common\AddressData.cs" />
+    <Compile Include="SWIFT\Fields\Common\Enums.cs" />
+    <Compile Include="SWIFT\Fields\Common\PassportData.cs" />
+    <Compile Include="SWIFT\Fields\Common\PhoneData.cs" />
+    <Compile Include="SWIFT\Fields\Common\SwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\ExpensesDetail.cs" />
+    <Compile Include="SWIFT\Fields\IField.cs" />
+    <Compile Include="SWIFT\Fields\PaymentInformation.cs" />
+    <Compile Include="SWIFT\Fields\SenderToReceiverInformation.cs" />
+    <Compile Include="SWIFT\Fields\Beneficiary.cs" />
+    <Compile Include="SWIFT\MessageA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SWIFT\MessageB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SWIFT\Fields\BranchSwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\OrganizationSwiftCode.cs" />
+    <Compile Include="SWIFT\Fields\Sender.cs" />
+    <Compile Include="SWIFT\Fields\FieldBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWIFT\Fields\BankOperationCode.cs" />
+    <Compile Include="SWIFT\Fields\Amount.cs" />
+    <Compile Include="SWIFT\Fields\TransactionNumber.cs" />
+    <Compile Include="SWIFT\MT103.cs" />
+    <Compile Include="SWIFT\Utils\Transliterator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DAL\ORM\ICBC\ICBC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ICBC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="SWIFT\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\SQL\China_ICBC_Hieroglyphs.sql" />
+    <Content Include="DAL\SQL\China_ICBC_ProvincialBranch.sql" />
+    <Content Include="DAL\SQL\China_ICBC_Transactions.sql" />
+    <Content Include="DAL\SQL\spChina_ICBC_Transactions_Insert.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
